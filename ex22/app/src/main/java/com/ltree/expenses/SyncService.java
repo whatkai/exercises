@@ -25,17 +25,18 @@ public class SyncService extends IntentService {
     public void onCreate() {
         super.onCreate();
         Log.i(TAG,"onCreate() called");
-    }
-
-    @Override
-    protected void onHandleIntent(Intent intent) {
-        Log.i(TAG,"Processing started");
+        Log.i(TAG, "Processing started");
         try {
             Thread.sleep(30000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         Log.i(TAG,"Processing Finished");
+
+    }
+
+    @Override
+    protected void onHandleIntent(Intent intent) {
 
     }
 }
